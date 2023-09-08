@@ -26,7 +26,7 @@ export default function Home() {
           .map((item: Tweet, index: number) => {
             const postTime = convertTimeToSec(item.timestamp)
 
-            if (postTime > 31) return null
+            if (postTime > 30) return null
 
             return (
               <li
