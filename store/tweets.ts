@@ -7,6 +7,7 @@ export interface Tweet {
   account: string
   timestamp: number
   content: string
+  id?: number
 }
 
 const createTweetSource = (
@@ -30,7 +31,5 @@ export const tweets$ = merge(
 )
 
 export const rawTweets$: any = new BehaviorSubject([])
-
-// tweets$.subscribe(console.log.bind(console))
 
 tweets$.subscribe()
