@@ -10,7 +10,7 @@ interface Props {
   isActiveStatus: boolean
 }
 
-const ListTweet = ({
+const ItemTweet = ({
   tweetInfo,
   postTime,
   handleUnlike,
@@ -31,8 +31,10 @@ const ListTweet = ({
 
   return (
     <div
-      className={`p-4  mb-4 rounded-lg border-2 border-solid bg-white border-gray-200 ${
-        isActiveStatus ? "border-blue-400 bg-blue-50" : "border-white"
+      className={`p-4  mb-4 rounded-lg border-2 border-solid bg-white border-gray-200 ease-in-out	duration-100 ${
+        isActiveStatus
+          ? "border-blue-500 bg-red-50 scale-105 shadow-lg"
+          : "border-white"
       }`}
     >
       <div>
@@ -73,11 +75,11 @@ const ListTweet = ({
             priority
           />
 
-          {isActiveStatus ? "Liked" : "Like"}
+          {isActiveStatus ? "You liked this tweet" : "Like"}
         </a>
       </div>
     </div>
   )
 }
 
-export default ListTweet
+export default ItemTweet
