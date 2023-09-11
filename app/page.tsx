@@ -1,12 +1,10 @@
 "use client"
 
-import { convertTimeToSec } from "@/utilits/utilits"
 import { useEffect, useState } from "react"
 import { Tweet, tweets$ } from "./../store/tweets"
 import ActionsHeader from "./components/actionsHeader"
-import ItemTweet from "./components/itemTweet"
-import TabNav from "./components/tabNav"
 import ListTweet from "./components/likedList"
+import TabNav from "./components/tabNav"
 
 export default function Home() {
   const [data, setData] = useState<Tweet[]>([])

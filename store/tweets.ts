@@ -30,6 +30,4 @@ export const tweets$ = merge(
   createTweetSource(5000, "CommitStrip", "Funny")
 )
 
-export const rawTweets$: any = new BehaviorSubject([])
-
 tweets$.subscribe()
